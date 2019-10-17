@@ -1,3 +1,4 @@
+system "Bundler install"
 require 'bundler'
 Bundler.require
 
