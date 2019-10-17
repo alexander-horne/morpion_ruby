@@ -21,4 +21,19 @@ class Application
 
 end
 
+puts
+puts "     |           |     "
+puts "-----|-----------|-----"
+puts "     |TIC-TAC-TOE|     "
+puts "-----|-----------|-----"
+puts "     |           |     \n\n"
+puts "Player 1 :"
+print "> "
+gets.chomp = name
+Player.new(name, X)
+puts "Player 2 :"
+print "> "
+gets.chomp = name
+Player.new(name, O)
+
 binding.pry
