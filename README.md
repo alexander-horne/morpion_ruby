@@ -6,10 +6,9 @@
 
 <h2>Mode d'emploi</h2>
 
-Bienvenue dans le morpion edition Montpellier, ceci est un jeu de strategie mais aussi il faut bien reflechir.
+ Bienvenue dans le morpion version Ruby ! 
+Le morpion est un jeu de réflexion se pratiquant à deux joueurs au tour par tour et dont le but est de créer le premier un alignement sur une grille.
 
-<p><h5>Pour lancer le jeu, veuillez entrer dans votre terminal</h5> `ruby app.rb` <h5>et puis le jeu commence.</h5></p>
-
-On a fait seulement un `one game play` qui veut dire que c'est qu'une partie
+<p><h5>Pour lancer le jeu, veuillez entrer dans votre terminal</h5> `ruby app.rb` <h5>et le jeu commence.</h5></p>
 
 <h1>Bon jeu !!!!</h1>
