@@ -5,7 +5,7 @@ class Game
   def initialize
     #TO DO : créé 2 joueurs, créé un board, met le status à "on going", défini un current_player
     @players_array = []
-    values = ["X".colorize(:red), "O".colorize(:color => :blue)]
+    values = ["X".colorize(:color => :red, :background => :white), "O".colorize(:color => :blue, :background => :white)]
     2.times do |i|
       @players_array << Player.new(name = "Player #{i+1}", value=values[i])
     end
@@ -63,7 +63,7 @@ class Game
   def new_round
     # TO DO : relance une partie en initialisant un nouveau board mais en gardant les mêmes joueurs.
     puts "Voulez-vous faire une nouvelle partie ?"
-    puts "Taper Entrée pour valider ou n'importe quelle touche + Entrée pour quitter"
+    puts "Tapez Entrée pour valider ou n'importe quelle touche + Entrée pour quitter"
     input = gets
     if input == "\n"
       puts "Nouvelle partie lancée !"
