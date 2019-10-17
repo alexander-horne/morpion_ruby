@@ -11,8 +11,7 @@ require 'show/'
 class Application
   def perform
     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
-    board = Board.new
-    game = Game.new(board)
+    game = Game.new
     unless board.victory?
       game.turn
     end
