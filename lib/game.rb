@@ -34,14 +34,30 @@ class Game
     puts "C'est au tour de #{current_player.name} : #{current_player.value}"
     puts "Dans quelle case souhaites-tu jouer ?"
     print "> "
-    choice = gets.chomp.to_i # TODO : faire un dic de correspondance
-    while choice > 8
-      puts "Pardon ?"
-      print "> "
-      choice = gets.chomp.to_i
+    choice = gets.chomp.upcase # TODO : faire un dic de correspondance
+      case choice
+      when "A1"
+        choice = 0
+      when "B1"
+        choice = 1
+      when "C1"
+        choice = 2
+      when "A2"
+        choice = 3
+      when "B2" 
+        choice = 4
+      when "C2"
+        choice = 5
+      when "A3"
+        choice = 6
+      when "B3"
+        choice = 7
+      when "C3"
+        choice = 8
+      else
+        choice = 4
     end
     @board.boardcase_array[choice].value = current_player.value
-
   end
 
   def victory?

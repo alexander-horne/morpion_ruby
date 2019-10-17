@@ -10,10 +10,12 @@ require 'player'
 require 'colorize'
 require_relative 'show'
 
+
 class Application
   def perform
     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
     game = Game.new
+    gets.chomp
     system("clear")
     show = Show.new
     until game.victory? == true
