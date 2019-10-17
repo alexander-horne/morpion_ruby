@@ -10,6 +10,21 @@ attr_accessor :valeur, :position
 	    @position = position
   end
   
+  def show_case
+  	if @valeur == "X"
+  		puts "-----"
+  		puts "| X |"
+  		puts "-----"
+  	elsif @valeur == "O"
+  		puts "-----"
+  		puts "| O |"
+  		puts "-----"
+  	else
+  		puts "-----"
+  		puts "|   |"
+  		puts "-----"
+  	end
+  end
 end
 
 binding.pry
