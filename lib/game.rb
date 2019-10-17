@@ -9,7 +9,7 @@ class Game
     @players_array = []
     values = ["X", "O"]
     2.times do |i|
-      @players_array << Player.new(name = "Player1", value=values[i])
+      @players_array << Player.new(name = "Player[i]", value=values[i])
     end
     @current_player = @players_array[0]
     @status = "on going"
@@ -28,6 +28,7 @@ class Game
         victory?
       end
     end
+
   end
 
   def new_round
