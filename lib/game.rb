@@ -35,7 +35,7 @@ class Game
     puts "Dans quelle case souhaites-tu jouer ?"
     print "> "
     choice = gets.chomp.to_i # TODO : faire un dic de correspondance
-    board.boardcase_array[choice] = current_player.value
+    board.boardcase_array[choice] = current_player
 
   end
 
