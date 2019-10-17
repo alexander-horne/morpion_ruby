@@ -1,6 +1,6 @@
 class Game
   #TO DO : la classe a plusieurs attr_accessor: le current_player (égal à un objet Player), le status (en cours, nul ou un objet Player s'il gagne), le Board et un array contenant les 2 joueurs.
-  attr_accessor :current_player, :status, :board, :players_array
+  attr_accessor :current_player, :status, :board, :players_array, :counter
 
   def initialize
     #TO DO : créé 2 joueurs, créé un board, met le status à "on going", défini un current_player
@@ -62,6 +62,16 @@ class Game
 
   def new_round
     # TO DO : relance une partie en initialisant un nouveau board mais en gardant les mêmes joueurs.
+    puts "Voulez-vous faire une nouvelle partie ?"
+    puts "Taper Entrée pour valider ou n'importe quelle touche + Entrée pour quitter"
+    input = nil
+    if input == "\n"
+      puts "Nouvelle partie lancée !"
+    else
+      puts "Bye !"
+      exit
+    end
+
     
   end
 
