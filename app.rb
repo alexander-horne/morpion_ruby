@@ -17,8 +17,8 @@ class Application
     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
     game = Game.new(counter)
     game.counter += 1
-    system("clear")
     show = Show.new
+    system("clear")
     until game.victory? == true
       system("clear")
       puts "       ### Partie #{game.counter} ###"
@@ -32,6 +32,7 @@ class Application
   end
 
 end
-
+show = Show.new
+show.welcome
 app = Application.new 
 app.perform

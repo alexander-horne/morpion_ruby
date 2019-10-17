@@ -1,5 +1,16 @@
 class Show
 
+	def welcome
+		puts
+		puts "    #================================#"
+		puts "    |         Hello, world !         |"
+		puts "    |    Welcome to Tic-Tac-Toe !    |"
+		puts "    |           RUBY V1.96           |"
+		puts "    #================================#"
+		puts
+		gets.chomp
+	end
+
 	def show_board(board)
 		#TO DO : affiche sur le terminal l'objet de classe Board en entrée. S'active avec un Show.new.show_board(instance_de_Board)
 		white5 = "     ".colorize(:background => :white)
