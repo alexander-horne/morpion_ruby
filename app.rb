@@ -35,5 +35,3 @@ puts "Player 2 :"
 print "> "
 gets.chomp = name
 Player.new(name, O)
-
-binding.pry
