@@ -56,6 +56,9 @@ class Game
       (@board.boardcase_array[0].value == player.value && @board.boardcase_array[4].value == player.value && @board.boardcase_array[8].value == player.value) ||
       (@board.boardcase_array[2].value == player.value && @board.boardcase_array[4].value == player.value && @board.boardcase_array[6].value == player.value)
         return true
+      if false
+        game_end
+      end
       end
     end
   end
