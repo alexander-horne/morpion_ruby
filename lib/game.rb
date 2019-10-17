@@ -7,7 +7,7 @@ class Game
     @players_array = []
     values = ["X", "O"]
     2.times do |i|
-      @players_array << Player.new(name = "Player[i]", value=values[i])
+      @players_array << Player.new(name = "Player#{i}", value=values[i])
     end
     @current_player = @players_array[0]
     @status = "on going"
@@ -17,12 +17,39 @@ class Game
   def turn
     #TO DO : méthode faisant appelle aux méthodes des autres classes (notamment à l'instance de Board). Elle affiche le plateau, demande au joueur ce qu'il joue, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie.
     if @status == "on going"
-      until victory? == true
-        player = player1
-        play_turn(player)
-        player = player2
-        play_turn(player)
+      play_turn(@current_player)
+      if @current_player == players_array[0]
+        @current_player = players_array[1]
+      else
+        @current_player = players_array[0]
       end
+    end
+  end
+
+  def play_turn(current_player)
+    #TO DO : une méthode qui :
+    #1) demande au bon joueur ce qu'il souhaite faire
+    #2) change la BoardCase jouée en fonction de la valeur du joueur (X ou O)
+
+    puts "C'est au tour de #{current_player.name} : #{current_player.value}"
+    puts "Dans quelle case souhaites-tu jouer ?"
+    print "> "
+    choice = gets.chomp # TODO : faire un dic de correspondance
+    @boardcase_array[choice] = current_player.value
+
+  end
+
+  def victory?
+    #TO DO : une méthode qui vérifie le plateau et indique s'il y a un vainqueur ou match nul
+    @players_array.each do |player|
+      (boardcase_array[0] == player.value && boardcase_array[1] == player.value && boardcase_array[3] == player.value) ||
+      (boardcase_array[4] == player.value && boardcase_array[5] == player.value && boardcase_array[6] == player.value) ||
+      (boardcase_array[7] == player.value && boardcase_array[8] == player.value && boardcase_array[9] == player.value) ||
+      (boardcase_array[1] == player.value && boardcase_array[4] == player.value && boardcase_array[7] == player.value) ||
+      (boardcase_array[2] == player.value && boardcase_array[5] == player.value && boardcase_array[8] == player.value) ||
+      (boardcase_array[3] == player.value && boardcase_array[6] == player.value && boardcase_array[9] == player.value) ||
+      (boardcase_array[1] == player.value && boardcase_array[5] == player.value && boardcase_array[9] == player.value) ||
+      (boardcase_array[3] == player.value && boardcase_array[5] == player.value && boardcase_array[7] == player.value)
     end
   end
 
@@ -32,5 +59,6 @@ class Game
 
   def game_end
     # TO DO : permet l'affichage de fin de partie quand un vainqueur est détecté ou si il y a match nul
+    puts "Victoire de #{@current_player} !"
   end    
 end
