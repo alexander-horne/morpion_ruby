@@ -42,14 +42,16 @@ class Game
   def victory?
     #TO DO : une méthode qui vérifie le plateau et indique s'il y a un vainqueur ou match nul
     @players_array.each do |player|
-      (board.boardcase_array[0] == player.value && board.boardcase_array[1] == player.value && board.boardcase_array[3] == player.value) ||
-      (board.boardcase_array[4] == player.value && board.boardcase_array[5] == player.value && board.boardcase_array[6] == player.value) ||
-      (board.boardcase_array[7] == player.value && board.boardcase_array[8] == player.value && board.boardcase_array[9] == player.value) ||
-      (board.boardcase_array[1] == player.value && board.boardcase_array[4] == player.value && board.boardcase_array[7] == player.value) ||
-      (board.boardcase_array[2] == player.value && board.boardcase_array[5] == player.value && board.boardcase_array[8] == player.value) ||
-      (board.boardcase_array[3] == player.value && board.boardcase_array[6] == player.value && board.boardcase_array[9] == player.value) ||
-      (board.boardcase_array[1] == player.value && board.boardcase_array[5] == player.value && board.boardcase_array[9] == player.value) ||
-      (board.boardcase_array[3] == player.value && board.boardcase_array[5] == player.value && board.boardcase_array[7] == player.value)
+      if (@board.boardcase_array[0].value == player.value && @board.boardcase_array[1].value == player.value && @board.boardcase_array[2].value == player.value) ||
+      (@board.boardcase_array[3].value == player.value && @board.boardcase_array[4].value == player.value && @board.boardcase_array[5].value == player.value) ||
+      (@board.boardcase_array[6].value == player.value && @board.boardcase_array[7].value == player.value && @board.boardcase_array[8].value == player.value) ||
+      (@board.boardcase_array[0].value == player.value && @board.boardcase_array[3].value == player.value && @board.boardcase_array[6].value == player.value) ||
+      (@board.boardcase_array[1].value == player.value && @board.boardcase_array[4].value == player.value && @board.boardcase_array[7].value == player.value) ||
+      (@board.boardcase_array[2].value == player.value && @board.boardcase_array[5].value == player.value && @board.boardcase_array[8].value == player.value) ||
+      (@board.boardcase_array[0].value == player.value && @board.boardcase_array[4].value == player.value && @board.boardcase_array[8].value == player.value) ||
+      (@board.boardcase_array[2].value == player.value && @board.boardcase_array[4].value == player.value && @board.boardcase_array[6].value == player.value)
+        return true
+      end
     end
   end
 
