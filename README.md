@@ -10,3 +10,6 @@ Bienvenue dans le morpion edition Montpellier, ceci est un jeu de strategie mais
 
 <h5>Pour lancer le jeu, veuillez entrer dans votre terminal `ruby app.rb` et puis le jeu commence.</h5>
 
+On a fait seulement un `one game play` qui veut dire que c'est qu'une partie
+
+<h1>Bon jeu !!!!</h1>
