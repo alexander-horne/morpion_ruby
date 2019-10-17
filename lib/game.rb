@@ -18,7 +18,7 @@ class Game
 
   def turn
     #TO DO : méthode faisant appelle aux méthodes des autres classes (notamment à l'instance de Board). Elle affiche le plateau, demande au joueur ce qu'il joue, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie.
-    # if @status 
+    # if @status = "on going"
   end
 
   def new_round
