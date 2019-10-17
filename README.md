@@ -9,6 +9,8 @@
  Bienvenue dans le morpion version Ruby ! 
 Le morpion est un jeu de réflexion se pratiquant à deux joueurs au tour par tour et dont le but est de créer le premier un alignement sur une grille.
 
-<h5>Pour lancer le jeu, veuillez entrer dans votre terminal</h5> $ ruby app.rb \n et le jeu commence.</h5>
+<h5>Pour lancer le jeu, veuillez entrer dans votre terminal</h5> 
+ $ ruby app.rb
+<h5>et le jeu commence.</h5>
 
 <h1>Bon jeu !!!</h1>
