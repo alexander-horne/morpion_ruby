@@ -55,6 +55,7 @@ class Game
 
   def new_round
     # TO DO : relance une partie en initialisant un nouveau board mais en gardant les mêmes joueurs.
+    
   end
 
   def game_end
