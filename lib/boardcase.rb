@@ -7,4 +7,13 @@ attr_accessor :value
 	    @value = value
   end
 
+  def value=(value) #setter method
+    if @value == ' '
+    @value = value
+    else
+      puts "Cette case est déjà prise. Dommage pour toi !"
+      sleep 1.5
+    end
+  end
+
 end
