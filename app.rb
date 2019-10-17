@@ -1,4 +1,4 @@
-system "Bundler install"
+system "Bundler install --quiet"
 require 'bundler'
 Bundler.require
 
