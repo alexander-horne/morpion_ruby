@@ -18,7 +18,7 @@ class Application
     show = Show.new
     until game.victory? == true
       system("clear")
-      puts "### Partie #{game.counter} ###"
+      puts "       ### Partie #{game.counter} ###"
       show.show_board(game.board)
       game.turn
     end
