@@ -11,9 +11,11 @@ require 'colorize'
 require_relative 'show'
 
 class Application
-  def perform
+
+  def perform(counter)
     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
-    game = Game.new
+    game = Game.new(counter)
+    game.counter += 1
     system("clear")
     show = Show.new
     until game.victory? == true
@@ -31,4 +33,4 @@ class Application
 end
 
 app = Application.new 
-app.perform
+app.perform(counter=0)
