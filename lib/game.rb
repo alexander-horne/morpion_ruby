@@ -28,7 +28,6 @@ class Game
   def game_end
     # TO DO : permet l'affichage de fin de partie quand un vainqueur est détecté ou si il y a match nul
   end    
-
 end
 
 binding.pry
