@@ -64,7 +64,7 @@ class Game
   def new_round
     # TO DO : relance une partie en initialisant un nouveau board mais en gardant les mêmes joueurs.
     puts "Voulez-vous faire une nouvelle partie ?"
-    puts "Tapez Entrée pour valider ou n'importe quelle touche + Entrée pour quitter"
+    puts "Tapez Entrée pour valider ou Exit pour quitter"
     input = gets
     if input == "\n"
       puts "Nouvelle partie lancée !"
