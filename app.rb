@@ -18,6 +18,7 @@ class Application
       show.show_board(game.board)
       game.turn
     end
+    show.show_board(game.board)
     game.game_end
     # game.new_round
   end
