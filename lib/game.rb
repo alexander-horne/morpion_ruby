@@ -35,6 +35,11 @@ class Game
     puts "Dans quelle case souhaites-tu jouer ?"
     print "> "
     choice = gets.chomp.to_i # TODO : faire un dic de correspondance
+    while choice > 8
+      puts "Pardon ?"
+      print "> "
+      choice = gets.chomp.to_i
+    end
     @board.boardcase_array[choice].value = current_player.value
 
   end
