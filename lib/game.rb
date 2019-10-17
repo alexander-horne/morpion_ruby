@@ -34,7 +34,7 @@ class Game
     puts "C'est au tour de #{current_player.name} : #{current_player.value}"
     puts "Dans quelle case souhaites-tu jouer ?"
     print "> "
-    choice = gets.chomp # TODO : faire un dic de correspondance
+    choice = gets.chomp.to_i # TODO : faire un dic de correspondance
     board.boardcase_array[choice] = current_player.value
 
   end
