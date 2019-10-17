@@ -60,6 +60,6 @@ class Game
 
   def game_end
     # TO DO : permet l'affichage de fin de partie quand un vainqueur est détecté ou si il y a match nul
-    puts "Victoire de #{@current_player} !"
+    puts "Victoire de #{@current_player.name} !"
   end    
 end
