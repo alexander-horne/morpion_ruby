@@ -12,7 +12,7 @@ require_relative 'show'
 
 class Application
 
-  def perform(counter)
+  def perform(counter=0)
     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
     game = Game.new(counter)
     game.counter += 1
@@ -33,4 +33,4 @@ class Application
 end
 
 app = Application.new 
-app.perform(counter=0)
+app.perform
