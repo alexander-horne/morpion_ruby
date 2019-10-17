@@ -1,5 +1,5 @@
-require 'https://rubygems.org/'
-gem '2.5.1'
+source 'https://rubygems.org' do
+ruby '2.5.1'
 gem 'pry'
-gem 'nokogiri'
-gem 'Twitter'
+gem 'rubocop', '~> 0.57.2'
+end
