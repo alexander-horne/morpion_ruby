@@ -27,4 +27,5 @@ attr_accessor :valeur, :position
   end
 end
 
+
 binding.pry
