@@ -20,5 +20,3 @@ class Application
   end
 
 end
-
-binding.pry
