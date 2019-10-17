@@ -2,11 +2,11 @@ require 'bundler'
 Bundler.require
 
 $:.unshift File.expand_path('./../lib/', __FILE__)
-require 'board/'
-require 'boardcase/'
+require 'board'
+require 'boardcase'
 require 'game'
-require 'player/'
-require 'show/'
+require 'player'
+require 'show'
 
 class Application
   def perform
@@ -20,3 +20,5 @@ class Application
   end
 
 end
+
+binding.pry
