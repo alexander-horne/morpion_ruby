@@ -3,9 +3,9 @@ class Player
   attr_reader :name, :value
 
   
-  def initialize(nom, value)
+  def initialize(name, value)
     #TO DO : doit régler son nom et sa valeur
-    @name = nom
+    @name = name
     @value = value
   end
 end
