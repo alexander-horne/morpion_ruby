@@ -14,7 +14,7 @@ class Application
     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
     game = Game.new
     show = Show.new
-    while game.victory?
+    until game.victory? == true
       show.show_board(game.board)
       game.turn
     end
