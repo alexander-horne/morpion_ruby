@@ -1,3 +1,5 @@
+require 'pry'
+
 class Game
   #TO DO : la classe a plusieurs attr_accessor: le current_player (égal à un objet Player), le status (en cours, nul ou un objet Player s'il gagne), le Board et un array contenant les 2 joueurs.
   attr_accessor :current_player, :status, :board, :players_array
@@ -28,3 +30,6 @@ class Game
   end    
 
 end
+
+binding.pry
+puts "end of file"
