@@ -8,7 +8,7 @@
 
 Bienvenue dans le morpion edition Montpellier, ceci est un jeu de strategie mais aussi il faut bien reflechir.
 
-<h5>Pour lancer le jeu, veuillez entrer dans votre terminal</h5> `ruby app.rb` <h5>et puis le jeu commence.</h5>
+<p><h5>Pour lancer le jeu, veuillez entrer dans votre terminal</h5> `ruby app.rb` <h5>et puis le jeu commence.</h5></p>
 
 On a fait seulement un `one game play` qui veut dire que c'est qu'une partie
 
