@@ -4,8 +4,8 @@ class Show
 		puts
 		puts "    #================================#"
 		puts "    |         Hello, world !         |"
-		puts "    |    Welcome to Tic-Tac-Toe !    |"
-		puts "    |           RUBY V1.96           |"
+		puts "    |     Welcome to Tic-Tac-Toe     |"
+		puts "    |           RUBY V1.94           |"
 		puts "    #================================#"
 		puts
 		gets.chomp
