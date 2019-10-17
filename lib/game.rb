@@ -64,7 +64,7 @@ class Game
     # TO DO : relance une partie en initialisant un nouveau board mais en gardant les mêmes joueurs.
     puts "Voulez-vous faire une nouvelle partie ?"
     puts "Taper Entrée pour valider ou n'importe quelle touche + Entrée pour quitter"
-    input = nil
+    input = gets
     if input == "\n"
       puts "Nouvelle partie lancée !"
       new_game = Application.new
