@@ -6,6 +6,6 @@ class Player
   def initialize(nom, valeur)
     #TO DO : doit régler son nom et sa valeur
     @name = nom
-    @value = valeur
+    @value = value
   end
 end
