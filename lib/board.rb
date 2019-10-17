@@ -10,34 +10,6 @@ class Board
     
     @boardcase_array = []
     1..9.times { @boardcase_array << BoardCase.new(value = ' ') }
-    
-  end
-
-  def play_turn(current_player)
-    #TO DO : une méthode qui :
-    #1) demande au bon joueur ce qu'il souhaite faire
-    #2) change la BoardCase jouée en fonction de la valeur du joueur (X ou O)
-
-    puts "C'est au tour de #{current_player.name} : #{current_player.value}"
-    puts "Dans quelle case souhaites-tu jouer ?"
-    print "> "
-    choice = gets.chomp
-    @boardcase_array[choice] = current_player.value
-
-  end
-
-  def victory?
-    #TO DO : une méthode qui vérifie le plateau et indique s'il y a un vainqueur ou match nul
-    @players_array.each do |player|
-      (boardcase_array[0] == player.value && boardcase_array[1] == player.value && boardcase_array[3] == player.value) ||
-      (boardcase_array[4] == player.value && boardcase_array[5] == player.value && boardcase_array[6] == player.value) ||
-      (boardcase_array[7] == player.value && boardcase_array[8] == player.value && boardcase_array[9] == player.value) ||
-      (boardcase_array[1] == player.value && boardcase_array[4] == player.value && boardcase_array[7] == player.value) ||
-      (boardcase_array[2] == player.value && boardcase_array[5] == player.value && boardcase_array[8] == player.value) ||
-      (boardcase_array[3] == player.value && boardcase_array[6] == player.value && boardcase_array[9] == player.value) ||
-      (boardcase_array[1] == player.value && boardcase_array[5] == player.value && boardcase_array[9] == player.value) ||
-      (boardcase_array[3] == player.value && boardcase_array[5] == player.value && boardcase_array[7] == player.value)
-    end
   end
 
 end
