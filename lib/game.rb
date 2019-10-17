@@ -85,8 +85,8 @@ class Game
     input = gets
     if input == "\n"
       puts "Nouvelle partie lancée !"
-      new_game = Application.new
-      new_game.perform
+      sleep 1.5
+      Application.perform
     else
       puts "Bye !"
       exit

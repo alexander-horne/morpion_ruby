@@ -11,7 +11,7 @@ attr_accessor :value
     if @value == ' '
     @value = value
     else
-      puts "Cette case est déjà prise. Dommage pour toi !"
+      puts "Ne fais pas n'importe quoi !"
       sleep 1.5
     end
   end
