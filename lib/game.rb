@@ -67,6 +67,8 @@ class Game
     input = nil
     if input == "\n"
       puts "Nouvelle partie lancée !"
+      new_game = Application.new
+      new_game.perform
     else
       puts "Bye !"
       exit
