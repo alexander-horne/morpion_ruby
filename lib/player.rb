@@ -8,3 +8,4 @@ class Player
     @nom = nom
     @valeur = valeur
   end
+end
