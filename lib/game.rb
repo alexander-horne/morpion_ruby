@@ -5,9 +5,9 @@ class Game
   def initialize
     #TO DO : créé 2 joueurs, créé un board, met le status à "on going", défini un current_player
     @players_array = []
-    values = ["X", "O"]
+    values = ["X".colorize(:red), "O".colorize(:color => :blue)]
     2.times do |i|
-      @players_array << Player.new(name = "Player#{i}", value=values[i])
+      @players_array << Player.new(name = "Player #{i+1}", value=values[i])
     end
     @current_player = @players_array[0]
     @status = "on going"

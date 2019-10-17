@@ -7,6 +7,7 @@ require 'board'
 require 'boardcase'
 require 'game'
 require 'player'
+require 'colorize'
 require_relative 'show'
 
 class Application
