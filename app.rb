@@ -13,15 +13,14 @@ require_relative 'show'
 
 class Application
 
-  def perform(counter=0)
+  def perform
     # TO DO : méthode qui initialise le jeu puis contient des boucles while pour faire tourner le jeu tant que la partie n'est pas terminée.
-    game = Game.new(counter)
-    game.counter += 1
+    game = Game.new
     show = Show.new
     system("clear")
     until game.victory? == true
       system("clear")
-      puts "       ### Partie #{game.counter} ###"
+      puts "       ### Partie #{Game.class_variable_get(:@@count)} ###"
       show.show_board(game.board)
       game.turn
     end
