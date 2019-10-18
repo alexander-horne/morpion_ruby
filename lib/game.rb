@@ -10,22 +10,19 @@ class Game
     2.times do |i|
       @players_array << Player.new(name = "Player #{i+1}", value=values[i])
     end
-    @current_player = @players_array[0]
-    @status = "on going"
+    @current_player = @players_array[1]
     @board = Board.new
     @@count += 1
   end
 
   def turn
     #TO DO : méthode faisant appelle aux méthodes des autres classes (notamment à l'instance de Board). Elle affiche le plateau, demande au joueur ce qu'il joue, vérifie si un joueur a gagné, passe au joueur suivant si la partie n'est pas finie.
-    if @status == "on going"
-      play_turn(@current_player)
-      if @current_player == players_array[0]
-        @current_player = players_array[1]
-      else
-        @current_player = players_array[0]
-      end
+    if @current_player == players_array[0]
+      @current_player = players_array[1]
+    else
+      @current_player = players_array[0]
     end
+    play_turn(@current_player)
   end
 
   def play_turn(current_player)
@@ -78,6 +75,10 @@ class Game
     end
   end
 
+  def tie?
+    @board.boardcase_array.all? { |boardcase| boardcase.value != ' '}
+  end
+
   def new_round
     # TO DO : relance une partie en initialisant un nouveau board mais en gardant les mêmes joueurs.
     puts "Voulez-vous faire une nouvelle partie ?"
@@ -96,7 +97,11 @@ class Game
 
   def game_end
     # TO DO : permet l'affichage de fin de partie quand un vainqueur est détecté ou si il y a match nul
-    puts "Victoire de #{@current_player.name} !\n\n"
-  end   
+    if victory? == true
+      puts "Victoire de #{@current_player.name} !\n\n"
+    else
+      puts "Match nul !"
+    end   
+  end
 
 end

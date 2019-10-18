@@ -18,7 +18,7 @@ class Application
     game = Game.new
     show = Show.new
     system("clear")
-    until game.victory? == true
+    until game.victory? == true or game.tie? == true
       system("clear")
       puts "       ### Partie #{Game.class_variable_get(:@@count)} ###"
       show.show_board(game.board)
@@ -33,6 +33,4 @@ class Application
 end
 show = Show.new
 show.welcome
-# app = Application.new 
-# app.perform
 Application.perform
